@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Shadow Generator 🌑</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">Saran No. 93</span>
+            <h1>🌑 BOX SHADOW STUDIO</h1>
+            <p>Atur slider & warna untuk membuat efek bayangan CSS kustom!</p>
+        </header>
+
+        <!-- Area Preview Box -->
+        <div class="preview-section">
+            <div id="preview-box" class="box">PRATINJAU</div>
+        </div>
+
+        <!-- Area Kontrol Slider & Warna -->
+        <div class="controls-section">
+            <div class="control-group yellow">
+                <label>Geseran X (Horizontal): <span id="val-x">10px</span></label>
+                <input type="range" id="slider-x" min="-50" max="50" value="10">
+            </div>
+
+            <div class="control-group pink">
+                <label>Geseran Y (Vertikal): <span id="val-y">10px</span></label>
+                <input type="range" id="slider-y" min="-50" max="50" value="10">
+            </div>
+
+            <div class="control-group blue">
+                <label>Keburaman (Blur): <span id="val-blur">0px</span></label>
+                <input type="range" id="slider-blur" min="0" max="100" value="0">
+            </div>
+
+            <div class="control-group green">
+                <label>Penyebaran (Spread): <span id="val-spread">0px</span></label>
+                <input type="range" id="slider-spread" min="-30" max="50" value="0">
+            </div>
+
+            <div class="control-group purple color-row">
+                <label for="color-shadow">Warna Bayangan:</label>
+                <div class="color-picker-wrapper">
+                    <input type="color" id="color-shadow" value="#0f172a">
+                    <span id="val-color">#0f172a</span>
+                </div>
+            </div>
+
+            <div class="control-group orange toggle-row">
+                <label for="toggle-inset">Bayangan Dalam (Inset):</label>
+                <input type="checkbox" id="toggle-inset" class="custom-checkbox">
+            </div>
+        </div>
+
+        <!-- Area Hasil Output CSS -->
+        <div class="output-section">
+            <div class="code-box">
+                <code id="css-code">box-shadow: 10px 10px 0px 0px #0f172a;</code>
+            </div>
+            <button id="btn-copy" class="btn btn-primary">📋 COPY CSS</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
